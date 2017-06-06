@@ -55,7 +55,7 @@ coro_avg.close()  #(5)
 
 
 
-### Yield From
+### \`yield from\`
 
 
 
