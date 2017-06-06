@@ -25,7 +25,7 @@ def averager():
         handle exception..
     finally:  #(3)
         print('Final Average: {}'.format(average))
-        
+
 ===================================
 
 coro_avg = averager()
@@ -46,7 +46,9 @@ coro_avg.close()  #(5)
 * \(4\) `next(coroutine)`문을 실행하여야만 처음 yield문까지 진행하여 코루틴이 값을 받을 수 있는 상태가 된다. 이를 코루틴을 기동한다고 한다 \(기동하기 전에 send를 하면 `TypeError: can't send non-None value to a just-started generator` 에러가 난다\)
   * 이를 쉽고 직관적으로 사용하기 위해 next만 해주는 `@coroutine` 데코레이터를 만들어서 쓰는 경우가 많음
 * \(5\) `.close()` 문으로 코루틴 종료 가능
-* 
+
+
+
 
 
 
