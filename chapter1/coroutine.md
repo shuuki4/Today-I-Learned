@@ -7,7 +7,7 @@
   * 코루틴도 비슷한 느낌이지만, Generator가 메인 코드의 서브로 돌아가는 느낌이라면 Coroutine은 메인 코드와 상호작용하면서 데이터를 주고받으면서 서로 다른 두개의 코드가 돌아가는 느낌
 * [PEP380 - Syntax for Delegating to a Subgenerator](https://www.python.org/dev/peps/pep-0380/)
 
-### Sample Usage \(1\)
+### Sample Usage
 
 ```py
 # 이동평균 계산
@@ -49,7 +49,10 @@ coro_avg.close()  #(5)
 
 
 
+### Returning Value
 
-
+* Python 3.3 이상부터는 generator 함수에서 값을 넘겨주는 것이 가능
+* Generator의 마지막에 `return ret`을 할 경우, Generator에서 발행하는 `StopIteration` Exception에 값이 담겨서 호출자로 넘겨보낼 수 있다
+* 
 
 
