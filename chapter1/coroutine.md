@@ -53,7 +53,9 @@ coro_avg.close()  #(5)
 * Generator의 마지막에 `return ret`을 할 경우, Generator에서 발행하는 `StopIteration` Exception에 값이 담겨서 호출자로 넘겨보낼 수 있다
   * `except StopIteration as exc: result = exc.value`
 
-### yield from
+
+
+## yield from
 
 
 
