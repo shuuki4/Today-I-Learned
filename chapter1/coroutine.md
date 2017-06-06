@@ -47,12 +47,17 @@ coro_avg.close()  #(5)
   * 이를 쉽고 직관적으로 사용하기 위해 next만 해주는 `@coroutine` 데코레이터를 만들어서 쓰는 경우가 많음
 * \(5\) `.close()` 문으로 코루틴 종료 가능
 
-
-
 ### Returning Value
 
 * Python 3.3 이상부터는 generator 함수에서 값을 넘겨주는 것이 가능
 * Generator의 마지막에 `return ret`을 할 경우, Generator에서 발행하는 `StopIteration` Exception에 값이 담겨서 호출자로 넘겨보낼 수 있다
-* 
+  * `except StopIteration as exc: result = exc.value`
+
+
+
+### Yield From
+
+
+
 
 
