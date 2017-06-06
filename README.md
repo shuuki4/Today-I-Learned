@@ -1,3 +1,9 @@
-# My Awesome Book
+# Today I Learned
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+* 그날그날 배웠던 것이나 읽은거리, 논문 등을 간단하게 정리해서 올립니다.
+* Deep Learning, Machine Learning, Python, NLP 등에 관련된 지식들을 끄적댈 예정입니다.
+
+
+
+
+
