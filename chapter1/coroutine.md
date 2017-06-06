@@ -53,9 +53,15 @@ coro_avg.close()  #(5)
 * Generator의 마지막에 `return ret`을 할 경우, Generator에서 발행하는 `StopIteration` Exception에 값이 담겨서 호출자로 넘겨보낼 수 있다
   * `except StopIteration as exc: result = exc.value`
 
-
-
 ## yield from
+
+* PEP 380에 추가된 syntax로서, 2단계 이상의 깊은 generator \(coroutine\)을 관리할 때 사용할 수 있는 syntax
+* 매우 간단하게 생각하면, 하위 제네레이터에서 yield하는 값을 쉽게 for문으로 yield한다고 생각할 수 있음
+* 1단계 제네레이터를 메인 제네레이터, 2단계 제네레이터를 하위 제네레이터, 그리고 메인 제네레이터의 사용자를 호출자라고 할때 메인 제네레이터에서 `result = yield from <EXPR>` 같은 방식으로 `yield from` 문을 사용할 수 있음. 이렇게 될 경우
+  * 메인 제네레이터가 `yield from`문에 걸려있을 경우, 호출자가 `send` 를 통해 보내는 값이나, 하위 제네레이터가 `yield`로 보내는 값은 서로에게 바로 전달됨
+  * 하위 제네레이터가 `return` 할 경우, 그 값은 `StopIteration` exception을 통해 메인 제네레이터에게 전달됨. 이 exception / value handling을 `yield from`문이 해줘서, 하위 제네레이터가 return으로 끝날경우 result 값에 그 결과값이 바인딩됨
+  * 호출자에서의 `throw()`나 `close()`도 하위 제네레이터에 전달됨. 이로 인해 Error가 발생할 경우 Error Propagation이 되거나, 제대로 종료될 경우 GeneratorExit exception이 발생하여 상위 제네레이터로 넘어감
+* yield from의 경우, 하위 제네레이터가 기동되지 않았다고 생각하고 자동으로 기동해주므로 주의
 
 
 
