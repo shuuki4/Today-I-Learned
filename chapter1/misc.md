@@ -21,7 +21,8 @@ def exit_func():
     do_some_cleaning()
 ```
 
-* 주의: Atexit은 파이썬이 정상적으로 종료되는 상황에서만 실행됨. 즉 Internal Error가 났거나, 외부에서 signal을 보내서 죽은 경우 등에는 종료되지 않
+* 주의: Atexit은 파이썬이 정상적으로 종료되는 상황에서만 실행됨. 즉 Internal Error가 났거나, 외부에서 signal을 보내서 죽은 경우 등에는 atexit에 등록해놓은 함수가 실행되지 않음
+  * 또한 예외적으로, subprocess의 경우 `os._exit()`을 이용해서 죽어서 subprocess에서 atexit을 등록해도 안먹히는듯 함
 
 
 
