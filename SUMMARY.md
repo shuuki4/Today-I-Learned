@@ -4,4 +4,5 @@
 * [Python](chapter1.md)
   * [Coroutine](chapter1/coroutine.md)
   * [Memory](chapter1/memory.md)
+  * [Misc](chapter1/misc.md)
 
