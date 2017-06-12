@@ -17,7 +17,7 @@
 
 * \(Token 단위의\) RNN based model -&gt; Synthetic and Context-aware and Long-tail aware..?
 
-  * 그렇다고 하니...
+  * 그렇다고 하니... 근데 너무 거창한 인트로 적어놓고 RNN으로 퉁치려는듯한..
 
 ### HRED architecture
 
@@ -38,10 +38,11 @@
 
 * 다음과 같은 모델들을 사용
 
-1. 원래 있는 co-occurrence based candidate generation으로 candidate들을 만듬 \(ADJ\)
-2. 여기에, supervised context-aware ranker \(Baseline Ranker\)를 먹여서 ranking
-   - LambdaMART라고 하는 supervised ranker 사용
-3. 2의 ranker에 HRED에서 나온 likelihood score를 더해서 feature로 사용
+* 원래 있는 co-occurrence based candidate generation으로 candidate들을 만듬 \(ADJ\)
+
+* 여기에, supervised context-aware ranker \(Baseline Ranker\)를 먹여서 ranking
+  * LambdaMART라고 하는 supervised ranker 사용
+* 2의 ranker에 HRED에서 나온 likelihood score를 더해서 feature로 사용
 
 * Mean Reciprocal Rank \(MRR\)로 evaluate
 
