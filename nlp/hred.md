@@ -1,4 +1,4 @@
-# HRED \(Hierarchical Recurrent Encoder-Decoder\)
+# HRED \(Hierarchical Recurrent Encoder-Decoder\) and its Variants
 
 ## A Hierarchical Recurrent Encoder-Decoder for Generative Context-aware Query Suggestion
 
@@ -41,7 +41,9 @@
 * 원래 있는 co-occurrence based candidate generation으로 candidate들을 만듬 \(ADJ\)
 
 * 여기에, supervised context-aware ranker \(Baseline Ranker\)를 먹여서 ranking
+
   * LambdaMART라고 하는 supervised ranker 사용
+
 * 2의 ranker에 HRED에서 나온 likelihood score를 더해서 feature로 사용
 
 * Mean Reciprocal Rank \(MRR\)로 evaluate
@@ -55,9 +57,17 @@
 
 * 실험 1의 세팅에, 중간중간 굉장히 frequent한 쿼리를 넣음 \(google, facebook.. 등\) -&gt; HRED가 이러한 쿼리에 robust한지 보기위함
 * 이 경우 ADJ 0.4507, Baseline 0.4831, HRED 0.5309
+* Hierarchical Structure가 frequent query가 들어올 때 update gate를 block할 수 있기 때문이라고 주장
 
 #### Exp 3: Long-tail Query
 
-* 
+* Anchor query \(prev query\) 에 Long-tail이 들어올 때에 대한 실험
+
+* ADJ 0.3830, Baseline 0.6788, HRED 0.7112
+
+  * 이 케이스에서 원래 성능보다 Baseline / HRED가 좋게 나오는 이유는, 분석해보니 이 케이스에서 noisy query가 적었기 때문이라고 함
+
+
+
 
 
