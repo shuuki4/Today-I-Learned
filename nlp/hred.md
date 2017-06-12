@@ -9,11 +9,11 @@
   * \(최근에 검색한\) 쿼리들의 sequence가 주어졌을 대, 다음으로 나타날 sequence of words를 예측함
   * 다음과 같은 성질들을 만족하고자 함
 
-  * Synthetic \(Pairwise retrieval을 통해 찾는것이 아니라, 만들어내는 것도 가능하도록\)
+    * Synthetic \(Pairwise retrieval을 통해 찾는것이 아니라, 만들어내는 것도 가능하도록\)
 
-  * Context-aware \(이전에 검색한 쿼리들의 context를 이용\)
+    * Context-aware \(이전에 검색한 쿼리들의 context를 이용\)
 
-  * Long-tail aware \(Popular 쿼리 뿐만 아니라 자주 등장하지 않는 쿼리들에도 robust하게 작동\)
+    * Long-tail aware \(Popular 쿼리 뿐만 아니라 자주 등장하지 않는 쿼리들에도 robust하게 작동\)
 
 * \(Token 단위의\) RNN based model -&gt; Synthetic and Context-aware and Long-tail aware..?
 
@@ -66,8 +66,6 @@
 * ADJ 0.3830, Baseline 0.6788, HRED 0.7112
 
   * 이 케이스에서 원래 성능보다 Baseline / HRED가 좋게 나오는 이유는, 분석해보니 이 케이스에서 noisy query가 적었기 때문이라고 함
-
-
 
 
 
