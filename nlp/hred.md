@@ -36,10 +36,27 @@
 
 ### Experiments
 
+* 다음과 같은 모델들을 사용
+
+1. 원래 있는 co-occurrence based candidate generation으로 candidate들을 만듬 \(ADJ\)
+2. 여기에, supervised context-aware ranker \(Baseline Ranker\)를 먹여서 ranking
+   - LambdaMART라고 하는 supervised ranker 사용
+3. 2의 ranker에 HRED에서 나온 likelihood score를 더해서 feature로 사용
+
+* Mean Reciprocal Rank \(MRR\)로 evaluate
+
+#### Exp 1: 일반적인 세팅
+
+* 일반적인 세팅에서 실험시, ADJ 0.5334, Baseline 0.5563, HRED 0.5749: Significant under t-test
+* 특히, Short보다는 Medium/Long 세팅에서 훨씬 성능이 올라간것을 발견
+
+#### Exp 2: Noisy Query
+
+* 실험 1의 세팅에, 중간중간 굉장히 frequent한 쿼리를 넣음 \(google, facebook.. 등\) -&gt; HRED가 이러한 쿼리에 robust한지 보기위함
+* 이 경우 ADJ 0.4507, Baseline 0.4831, HRED 0.5309
+
+#### Exp 3: Long-tail Query
+
 * 
-
-
-
-
 
 
