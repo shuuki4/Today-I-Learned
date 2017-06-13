@@ -8,4 +8,5 @@
 * [NLP](nlp.md)
   * [HRED](nlp/hred.md)
 * [Linear Algebra](linear-algebra.md)
+  * [Trace Trick](linear-algebra/trace-trick.md)
 
