@@ -7,4 +7,5 @@
   * [Misc](chapter1/misc.md)
 * [NLP](nlp.md)
   * [HRED](nlp/hred.md)
+* [Linear Algebra](linear-algebra.md)
 
