@@ -6,6 +6,8 @@
   * [Editor](chapter1/editor.md)
   * [Memory](chapter1/memory.md)
   * [Misc](chapter1/misc.md)
+* [Machine Learning](machine-learning.md)
+  * [Class weights](machine-learning/class-weights.md)
 * [NLP](nlp.md)
   * [HRED](nlp/hred.md)
 * [Linear Algebra](linear-algebra.md)
