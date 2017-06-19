@@ -4,11 +4,11 @@
 
 * 클래스가 있을 때, 각 클래스의 1 / \(전체 샘플 중 그 클래스 샘플의 비율  \* 클래스 갯수\) 로 맞춰서, balance 된 갯수보다 갯수가 적을 경우 weight을 높여주는 방식으로 사용
 
-* https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/utils/class\_weight.py
+* [https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/utils/class\_weight.py](https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/utils/class_weight.py)
 
   * compute class weight function
 
-
+* Data가 unbalance인 경우 효과가 꽤 큰듯?
 
 
 
